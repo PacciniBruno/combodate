@@ -153,6 +153,8 @@
                 relTime;
 
             if(this.options.firstItem === 'name') {
+                var lang = window.MP.config.language || $('html').attr('lang') || 'en';
+                moment.locale(lang);
                 //need both to support moment ver < 2 and  >= 2
                 if (moment.localeData) {
                     relTime = moment.localeData()._relativeTime;
